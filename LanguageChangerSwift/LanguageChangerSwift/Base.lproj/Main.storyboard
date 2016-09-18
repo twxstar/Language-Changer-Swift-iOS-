@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OXL-i7-cX8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="iQb-Bc-1K4">
+            <objects>
+                <viewController id="gfy-d5-hOk" customClass="ViewController" customModule="LanguageChangerSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W12-Vn-cJh"/>
+                        <viewControllerLayoutGuide type="bottom" id="aSI-yN-v2Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zGn-wZ-6dE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHh-F7-aZG">
+                                <rect key="frame" x="10" y="72" width="145" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="uWH-Jj-haq"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wu-Hq-Jgy">
+                                <rect key="frame" x="10" y="430" width="580" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="nOv-fL-ToE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="gfy-d5-hOk" id="QgQ-i1-XtJ"/>
+                                    <outlet property="delegate" destination="gfy-d5-hOk" id="WHt-db-65b"/>
+                                </connections>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypb-yF-LW1">
+                                <rect key="frame" x="163" y="72" width="427" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ypb-yF-LW1" firstAttribute="top" secondItem="W12-Vn-cJh" secondAttribute="bottom" constant="8" id="779-4R-Mhd"/>
+                            <constraint firstItem="GHh-F7-aZG" firstAttribute="top" secondItem="W12-Vn-cJh" secondAttribute="bottom" constant="8" id="RS9-hp-RQZ"/>
+                            <constraint firstAttribute="trailing" secondItem="9Wu-Hq-Jgy" secondAttribute="trailing" constant="10" id="cQF-XK-13P"/>
+                            <constraint firstAttribute="trailing" secondItem="Ypb-yF-LW1" secondAttribute="trailing" constant="10" id="hrB-5J-MVX"/>
+                            <constraint firstItem="9Wu-Hq-Jgy" firstAttribute="top" secondItem="GHh-F7-aZG" secondAttribute="bottom" constant="8" id="icY-OJ-Wzm"/>
+                            <constraint firstItem="9Wu-Hq-Jgy" firstAttribute="top" secondItem="Ypb-yF-LW1" secondAttribute="bottom" constant="8" id="jkq-qu-lkM"/>
+                            <constraint firstItem="GHh-F7-aZG" firstAttribute="leading" secondItem="zGn-wZ-6dE" secondAttribute="leading" constant="10" id="mpi-Pa-Nwl"/>
+                            <constraint firstItem="aSI-yN-v2Q" firstAttribute="top" secondItem="9Wu-Hq-Jgy" secondAttribute="bottom" constant="8" id="np0-mr-wPG"/>
+                            <constraint firstItem="9Wu-Hq-Jgy" firstAttribute="leading" secondItem="zGn-wZ-6dE" secondAttribute="leading" constant="10" id="q2p-Ae-cZL"/>
+                            <constraint firstItem="Ypb-yF-LW1" firstAttribute="leading" secondItem="GHh-F7-aZG" secondAttribute="trailing" constant="8" id="viH-Yd-jhp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hK1-cj-Zd6"/>
+                    <connections>
+                        <outlet property="flagImageView" destination="GHh-F7-aZG" id="ugr-6l-89e"/>
+                        <outlet property="localePicker" destination="9Wu-Hq-Jgy" id="Pag-Nx-mUb"/>
+                        <outlet property="textView" destination="Ypb-yF-LW1" id="zSY-Lw-ELp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZS-zM-tX2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871" y="-356"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uvj-7R-wGz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OXL-i7-cX8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UEQ-Mb-KxA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gfy-d5-hOk" kind="relationship" relationship="rootViewController" id="gDi-E8-FJy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M4P-pE-wTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="-356"/>
+        </scene>
+    </scenes>
+</document>
